@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Опросник для котолюбителей</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons.flaticon.com/png/512/906/premium/906265.png?token=exp=1659639700~hmac=1311eaf4e5df88af4036e3761a80e8cb"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <!-- Напишите класс `Cat` со свойствами, соответствующими полям вашего опросника (например, кличка, корм и пр.), и по нажатию на кнопку "Ок" создайте экземпляр этого класса, заполнив его свойства ответами из опросника. В этом классе будут только свойства и конструктор, без методов. Выведите результат (заполненный объект класса `Cat`) в консоль при помощи console.log. -->
+    <div class="wrapper">
+      <h1 class="title">Опросник для котолюбителей</h1>
+      <div class="questionnaire">
+        <form action="#">
+          <div class="questionnaire__form">
+            <legend><h2>Как вас зовут?</h2></legend>
+            <div class="questionnaire__name">
+              <label for="petName">Кличка питомца</label>
+              <input
+                class="questionnaire__item"
+                type="text"
+                name="catName"
+                id="petName"
+              />*
+            </div>
+
+            <div class="questionnaire__name">
+              <label for="yourName">Ваше имя</label>
+              <input
+                class="questionnaire__item"
+                type="text"
+                name="name"
+                id="yourName"
+              />*
+            </div>
+          </div>
+
+          <div class="questionnaire__form">
+            <legend><h2>Контактные данные</h2></legend>
+            <div class="questionnaire__contacts">
+              <label for="address">Адрес</label>
+              <input
+                class="questionnaire__item"
+                type="text"
+                name="address"
+                id="address"
+                required
+                placeholder="Адрес"
+              />*
+            </div>
+
+            <div class="questionnaire__contacts">
+              <label for="phoneNumber">Телефон</label>
+              <input
+                class="questionnaire__item"
+                type="text"
+                name="phone"
+                id="phoneNumber"
+                required
+                placeholder="+7 ххх ххх хх хх"
+                minlength="10"
+                maxlength="20"
+              />*
+            </div>
+
+            <div class="questionnaire__contacts">
+              <label for="email">Электронная почта</label>
+              <input
+                class="questionnaire__item"
+                type="text"
+                name="mail"
+                id="email"
+                required
+                placeholder="Электронная почта"
+              />*
+            </div>
+          </div>
+
+          <div class="questionnaire__form">
+            <label for="breed"
+              ><h2>Порода питомца</h2>
+              <p>(по классификации Всемирной федерации кошек)</p></label
+            >
+            <select name="breed" id="breed">
+              <option value="long">Длинношёрстная</option>
+              <option value="semi">Полудлинношёрстная</option>
+              <option value="short">Короткошёрстная</option>
+              <option value="nada">Ориентальная короткошёрстная</option>
+            </select>
+
+            <h2>Пол питомца</h2>
+            <label for="sex1">Самец</label>
+            <input type="radio" value="male" name="sex" id="sex1" /> <br />
+            <label for="sex2">Самка</label>
+            <input type="radio" value="female" name="sex" id="sex2" />
+
+            <h2>Тип питания</h2>
+            <input type="checkbox" value="dryfood" name="dry" id="food1" />
+            <label for="food1">Сухой корм</label> <br />
+            <input type="checkbox" value="wetfood" name="wet" id="food2" />
+            <label for="food2">Влажный корм</label> <br />
+            <input
+              type="checkbox"
+              value="naturalfood"
+              name="natural"
+              id="food3"
+            />
+            <label for="food3">Натуральный корм</label> <br />
+            <input type="checkbox" value="mixedfood" name="mixed" id="food4" />
+            <label for="food4">Смешанное питание</label>
+          </div>
+
+          <div class="questionnaire__form">
+            <h2>Комментарий</h2>
+            <p><label for="comment">Напишите о своём питомце</label></p>
+            <textarea name="commentary" id="comment" rows="5">
+Пару строк о любимце</textarea
+            >
+          </div>
+
+          <div class="questionnaire__form">
+            <label for="photo"><h2>Фото вашего питомца</h2></label>
+            <input type="file" name="photo" id="photo" />
+          </div>
+
+          <div class="questionnaire__form">
+            <button class="questionnaire__btn" id="submit">Отправить!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
