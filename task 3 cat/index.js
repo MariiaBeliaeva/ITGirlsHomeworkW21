@@ -69,4 +69,3 @@ fetch("https://httpbin.org/post",
     })
     .then(response => response.json())
     .catch(error => console.log(error));
-}
